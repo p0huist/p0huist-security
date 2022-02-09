@@ -7,7 +7,7 @@ require('discord-buttons')(bot);
 const { Color, Image, Footer, Author } = require("./config.js");
 const fs = require("fs"); 
 const request = require("request");
-const prefix = "e!";
+const prefix = "p0huist";
 const { Collection, MessageEmbed } = require("discord.js");
 const { inspect } = require("util");
 let dev = ["681553671364018196"];
@@ -15,7 +15,7 @@ const cmd = require("node-cmd");
 
 bot.login(process.env.BOT_TOKEN);
 global.mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://nemrihazem:hazemtn@cluster0.q6tsb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect('mongodb+srv://pohuistdatabas:p0huistwax@cluster0.q6tsb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log("✅ Connected to the database.");
 }).catch((err) => {
   console.log("❎ Unable to connect to the Mongodb database. Error:" + err);
@@ -51,6 +51,7 @@ init();
 
 bot.on("ready", () => {
   console.log(`[!]-------------------------------------[!]`);
+  console.log(`Owner:p0huist `);
   console.log(`Display Name : ${bot.user.username}`);
   console.log(`Public Prefix : ${prefix}`);
   console.log(`Version : v2`);
@@ -59,9 +60,9 @@ bot.on("ready", () => {
 
 bot.on("ready", async () => {
 /* let channel = bot.channels.cache.get("890671956054122587");
-  channel.send(new Discord.MessageEmbed().setColor(Color).setTimestamp().setThumbnail(bot.user.displayAvatarURL()).setTitle("Whoami Status").addField("Prefix", "`s!`").addField("Status", "<:enable:840230134899671060> Online").addField("Servers", `${bot.guilds.cache.size}`));*/
+  channel.send(new Discord.MessageEmbed().setColor(Color).setTimestamp().setThumbnail(bot.user.displayAvatarURL()).setTitle("WxY Status").addField("Prefix", "`p0huist`").addField("Status", "<:p0huist:840230134899671060> Online").addField("Servers", `${bot.guilds.cache.size}`));*/
   await bot.user.setStatus("online");
-  await bot.user.setActivity(`${prefix}help expert secuirty bot`, { type: "PLAYING" });
+  await bot.user.setActivity(`${prefix}help | p0huist | security`, { type: "PLAYING" });
  
  
  });
@@ -69,7 +70,7 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
   let guild = await Guild.findOne({ guildID: message.guild.id })
   if (message.content.startsWith(`<@${bot.user.id}>`)) {
-    return message.reply(`My prefix is \`${guild.prefix}\``);
+    return message.reply(`p0huist | My prefix is \`${guild.prefix}\``);
   }
 });
 /////
@@ -154,8 +155,8 @@ bot.on("clickButton", async (button) => {
 bot.on("message", (message) => {});
 bot.on("messageDelete", (message) => {
 if (message.mentions.users.first()) {
-    message.channel.send(new Discord.MessageEmbed().setColor(Color) .setTitle("Ghost Ping Detected!")
-            .setDescription(`**${message.author}** just pinged **${
+    message.channel.send(new Discord.MessageEmbed().setColor(Color) .setTitle("p0huist | Ghost Ping Detected!")
+            .setDescription(`p0huist | **${message.author}** just pinged **${
          message.mentions.users.first().username
        }** and then someone deleted the message!`)
             .addField("Deleted message content", `||**${
@@ -166,7 +167,7 @@ if (message.mentions.users.first()) {
 bot.on("messageUpdate", (message, newMessage) => {
  if (message.mentions.users.first()) {
     if (newMessage.mentions.users.first()) return;
-    message.channel.send(new Discord.MessageEmbed().setColor(Color).setTitle("Ghost Ping Detected!")
+    message.channel.send(new Discord.MessageEmbed().setColor(Color).setTitle("p0huist | Ghost Ping Detected!")
             .setDescription(`Ghost Ping Found!\n${message.author} just pinged ${
          message.mentions.users.first().username
        } and then someone deleted the message!`)
@@ -194,7 +195,7 @@ bot.on("messageUpdate", (message, newMessage) => {
         if (value && value.executor) {
             const member = channel.guild.members.cache.get(value.executor.id);
             if (member)
-                member.kick().catch(reason => console.error(reason.message)).then(() => console.log(`${member.user.tag} kicked because of webhook created !`));
+                member.kick().catch(reason => console.error(reason.message)).then(() => console.log(`p0huist | ${member.user.tag} kicked because of webhook created !`));
         }
     }).catch(err => console.error(err.message))
     channel.fetchWebhooks().then(webs => webs.each(w => w.delete().catch(reason => console.error(reason.message)).then(() => console.log('Webhook deleted successfully')))).catch(error => console.error(error.message))
