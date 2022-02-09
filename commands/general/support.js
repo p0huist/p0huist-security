@@ -7,7 +7,7 @@ module.exports = {
   name: "support",
 
   description: "Use this command to get the invite link",
-  usage: ["e!support"],
+  usage: ["support"],
   category: ["General"],
   enabled: true,
   memberPermissions: ["SEND_MESSAGES"],
@@ -25,9 +25,9 @@ module.exports = {
 
   let butn = new MessageButton()
   .setStyle('url')
-  .setURL('https://discord.gg/69CEKvnEGY') 
+  .setURL('https://wxy-bot.cf') 
   .setEmoji(`🗳`)
-  .setLabel('Link Server')
+  .setLabel('Poate nu intri ?')
  
 let row = new MessageActionRow()
       .addComponents(butn)
