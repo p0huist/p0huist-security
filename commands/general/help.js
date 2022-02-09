@@ -4,9 +4,9 @@ const { MessageButton, MessageActionRow } = require("discord-buttons");
 const { Color, Image, Footer, Author } = require("../../config.js");
 module.exports = {
   name: "help",
-  aliases: ["e!help","e!help <command>" , "e!h"],
+  aliases: ["help","help <command>" , "h"],
   description: "To show you all command of the bot",
-  usage: ["e!help","e!help <command>"],
+  usage: ["help","help <command>"],
   category: ["General"],
   enabled: true,            
   memberPermissions: [ "SEND_MESSAGES" ],            
@@ -21,22 +21,22 @@ module.exports = {
     .setAuthor(Author)
     .setImage(Image)
     
-    .setDescription(`<@${bot.user.id}> a security bot to protection your server please use **e!!help** followed by a command name to get more additional information on a command. For example: **e!help**`)
-    .addField("🛡️ || Security" , "`settings` , `antiban` , `antikick` , `antichannel` , `antirole` , `antispam` , `antibot` , `antiwebhook` , `punishment` , `whitelis` , `anti`")
-    .addField("⚙️ || Admin" , "`ban` , `kick` , `unbanall` , `clear` , `lock` , `unlock` , `lockall` , `unlockall` , `prefix`")
-    .addField("<:jano_66:925613617938849812> || General" , "`invite` , `stats` , `serverinfo` , `userinfo`")
+    .setDescription(`List Commands: <@${bot.user.id}>`)
+    .addField("p0huist | Security" , "`settings` , `antiban` , `antikick` , `antichannel` , `antirole` , `antispam` , `antibot` , `antiwebhook` , `punishment` , `whitelist add/remove` , `anti`")
+    .addField("p0huist | Admin" , "`ban` , `kick` , `unbanall` , `clear` , `lock` , `unlock` , `lockall` , `unlockall` , `prefix`")
+    .addField("p0huist | General" , "`invite` , `stats` , `serverinfo` , `userinfo`")
     .setFooter(Footer)
 
       let button1 = new MessageButton()
        .setStyle('url')
-       .setURL('https://discord.com/api/oauth2/authorize?client_id=733287493041913877&permissions=8&scope=bot') 
+       .setURL('https://discord.com/api/oauth2/authorize?client_id=805324635121778728&permissions=8&scope=bot') 
        .setEmoji(`🌍`)
        .setLabel('Invite')
 
       //////////////
       let button2 = new MessageButton()
        .setStyle('url')
-       .setURL('https://discord.gg/69CEKvnEGY') 
+       .setURL('https://discord.gg/wg3X8ymHVR') 
        .setEmoji(`💢`)
        .setLabel('Support')
 
