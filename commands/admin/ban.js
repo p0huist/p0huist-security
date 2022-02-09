@@ -5,7 +5,7 @@ module.exports = {
     name: "ban",
     aliases: ["band"],
     description: "You can ban a member, or multiple members using this command",
-    usage: ["e!ban [@User]"],
+    usage: ["ban [@User]"],
     category: ["Moderation"],
     enabled: true,
     memberPermissions: ["BAN_MEMBERS"],
@@ -27,14 +27,14 @@ module.exports = {
     if (user.id === client.user.id) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**I can't ban myself**`));
 
     if (message.guild.ownerID !== message.author.id && user.roles.highest.comparePositionTo(message.member.roles.highest) >= 0)
-      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`Usage: e!ban [@User]`));
+      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`Usage: ban [@User]`));
 
-    if (!message.guild.member(user).bannable) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**I cannot ban the mentioned user**`));
+    if (!message.guild.member(user).bannable) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist | **I cannot ban the mentioned user**`));
 
   
     const embedBan = new Discord.MessageEmbed()
       .setColor(Color)
-      .setDescription(`<:emoji_54:922264932676931624> **${user}** **banned from the server!**✈️`)
+      .setDescription(`p0huist |**${user}** **banned from the server!**✈️`)
 
     message.channel.send(embedBan);
     user.ban({ reason: args[1] });
