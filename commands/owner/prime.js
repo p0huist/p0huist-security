@@ -16,17 +16,17 @@ module.exports = {
       if (data) {
         if (data.log === "enable") {
         let time = day(data.time);
-       if(!data.time) return message.channel.send(`Your srrver don't have prime bot`)
+       if(!data.time) return message.channel.send(`p0huist |Your srrver don't have prime bot`)
 
         
-      message.channel.send(`Prime bot in this server end in ${time}`)
+      message.channel.send(`p0huist |Prime bot in this server end in ${time}`)
     
           } else {
-            message.channel.send(`This server don't have a prime bot`)
+            message.channel.send(`p0huist |This server don't have a prime bot`)
           }
         }
       if (!data) {
-          message.channel.send(`This server don't have a prime bot`)
+          message.channel.send(`p0huist |This server don't have a prime bot`)
         }
     } else
       
@@ -62,7 +62,7 @@ module.exports = {
           data.log = "enable";
           data.delete()
         }
-  message.channel.send(`Prime bot on server removed`)
+  message.channel.send(`p0huist |Prime bot on server removed`)
       }
   
   }
