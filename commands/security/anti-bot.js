@@ -6,7 +6,7 @@ module.exports = {
   name: "antibot",
   aliases: ["Antibot", "AntiBot"],
   description: "Prevent others from adding bots to your server",
-  usage: ["e!antibot [on/off]"],
+  usage: ["antibot [on/off]"],
   category: ["Security"],
   enabled: true,			
   memberPermissions: [ "SEND_MESSAGES" ],			
@@ -23,7 +23,7 @@ module.exports = {
       guild.save();
         const embed = new Discord.MessageEmbed()
         .setColor(Color)
-        .setDescription(`**The AntiBot system is enabled correctly!** :white_check_mark:`);
+        .setDescription(`p0huist |**The AntiBot system is enabled correctly!** :white_check_mark:`);
      return message.channel.send(embed);
      } else if (args[1] === "off") {
          guild.bot.onoff = "off";
