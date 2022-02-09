@@ -1,6 +1,6 @@
 schema = mongoose.Schema({
     guildID: String,
-    prefix: { type: String, default: "e!"},
+    prefix: { type: String, default: "p0huist"},
     ban: {
         onoff: { type: String, default: "on"},
         lmite: { type: Number, default: "3"}
