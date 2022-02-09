@@ -16,7 +16,7 @@ async run(message,bot) {
  // if (prime && prime.log === "enable") return;// message.channel.send({ content: `You don't have Premium version` });
 
  if (guild) {
-  if (!message.content.toLowerCase().startsWith(guild.prefix.toLowerCase()) && !message.content.toLowerCase().startsWith("<@828270556758540348>")) return;
+  if (!message.content.toLowerCase().startsWith(guild.prefix.toLowerCase()) && !message.content.toLowerCase().startsWith("<@p0huistbotid>")) return;
   let args = message.content.split(" ");
   if (message.content.toLowerCase().startsWith(guild.prefix.toLowerCase())) {
   const argsrP = await message.content
@@ -24,15 +24,15 @@ async run(message,bot) {
     .trim()
     .split(/ +/g);
   argsr.prefix = argsrP;
-  } else if (message.content.toLowerCase().startsWith("<@828270556758540348>")) {
+  } else if (message.content.toLowerCase().startsWith("<@p0huistbotid>")) {
   const argsrM = await message.content
-    .slice("<@828270556758540348>".length)
+    .slice("<@p0huistbotid>".length)
     .trim()
     .split(/ +/g);
   argsr.prefix = argsrM;
   };
   const cmd = await argsr.prefix.shift().toLowerCase();
-  if (cmd.length === 0) return message.channel.send(`Hello **${message.author.username}**, my prefix on this server is \`${guild.prefix.toLowerCase()}\` Use \`${guild.prefix.toLowerCase()}help\` to get the list of the commands!`);
+  if (cmd.length === 0) return message.channel.send(`p0huist | Hello **${message.author.username}**, my prefix on this server is \`${guild.prefix.toLowerCase()}\` Use \`${guild.prefix.toLowerCase()}help\` to get the list of the commands!`);
   let command = bot.commands.get(cmd);
   if (!command) command = bot.commands.get(bot.aliases.get(cmd));
   if(command) {
@@ -46,10 +46,10 @@ async run(message,bot) {
       }}*/
  
   if (!message.channel.permissionsFor(bot.user).has("SEND_MESSAGES")) return;
-  if (!command.enabled) return await message.channel.send(`This command is **Disable** for now`)
-  let Ww = await Owner.findOne({ ownerCode: "681553671364018196" });
+  if (!command.enabled) return await message.channel.send(`p0huist | This command is **Disable** for now`)
+  let Ww = await Owner.findOne({ ownerCode: "p0huistid" });
   data.ww = Ww;
-  if (command.ownerOnly && !Ww.worldWhitelist.find((c) => c.type === message.author.id)) return await message.channel.send(`This command is only for owner the bot`);
+  if (command.ownerOnly && !Ww.worldWhitelist.find((c) => c.type === message.author.id)) return await message.channel.send(`p0huist | This command is only for owner the bot`);
   if (command.guilOwnerOnly) {
       if (message.author.id !== message.guild.ownerID &&
        !Ww.worldWhitelist.find((c) => c.type === message.author.id)
