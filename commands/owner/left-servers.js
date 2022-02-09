@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { Color } = require("../../config.js");
 const Discord = require("discord.js");
-const ownerid = "681553671364018196";
+const ownerid = "p0huist";
 
 module.exports = {
   name: "leave",
@@ -23,7 +23,7 @@ if (!Guild) return message.channel.send(new Discord.MessageEmbed()
 Guild.leave();
 message.channel.send(new Discord.MessageEmbed()
 .setColor(Color)
-.setDescription(`Done Leave **${Guild.name}**`))
+.setDescription(`p0huist | Done Leave **${Guild.name}**`))
 
   }
 }
