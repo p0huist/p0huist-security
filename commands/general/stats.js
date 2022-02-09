@@ -12,7 +12,7 @@ module.exports = {
   name: "stats",
   aliases: ["botinfo"],
   description: "Get more information about the bot",
-  usage: ["s!stats"],
+  usage: ["stats"],
   category: ["General"],
   enabled: true,            
   memberPermissions: [ "SEND_MESSAGES" ],            
@@ -36,14 +36,14 @@ const stats = new Discord.MessageEmbed()
 .setColor(Color) 
 .setThumbnail(bot.user.displayAvatarURL()) 
 .setTitle("Expert Stats")
-.setDescription(`**Statistics**\n\nServers: ${bot.guilds.cache.size}\nBot Id: ${bot.user.id}\nCommands Count: 19\nBot Created At: ${created}\nPing: ${Math.round(bot.ws.ping)}ms\nUptime: ${duration1}\n\nTotal Memory: ${(os.totalmem() / 1024 / 1024).toFixed(2)} Mbps\nFree Memory: ${(os.freemem() / 1024 / 1024).toFixed(2)} Mbps\nHeap Total: ${(process.memoryUsage().heapTotal / 1024 / 1024).toFixed(2)} Mbps\nHeap Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} Mbps 
+.setDescription(`**p0huist | Statistics**\n\nServers: ${bot.guilds.cache.size}\nBot Id: ${bot.user.id}\nCommands Count: 19\nBot Created At: ${created}\nPing: ${Math.round(bot.ws.ping)}ms\nUptime: ${duration1}\n\nTotal Memory: ${(os.totalmem() / 1024 / 1024).toFixed(2)} Mbps\nFree Memory: ${(os.freemem() / 1024 / 1024).toFixed(2)} Mbps\nHeap Total: ${(process.memoryUsage().heapTotal / 1024 / 1024).toFixed(2)} Mbps\nHeap Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} Mbps 
 `)
 
    
       let button1 = new MessageButton()
        .setStyle('url')
-       .setURL('https://discord.com/api/oauth2/authorize?client_id=733287493041913877&permissions=8&scope=bot') 
-       .setLabel('Click Here To Invite Expert')
+       .setURL('https://discord.com/oauth2/authorize?client_id=805324635121778728&scope=bot&permissions=2146958847') 
+       .setLabel('Poate nu apesi?')
 
       
       let row1 = new MessageActionRow()
@@ -54,7 +54,7 @@ const stats = new Discord.MessageEmbed()
     
           let button2 = new MessageButton()
        .setStyle('url')
-       .setURL('https://discord.gg/69CEKvnEGY') 
+       .setURL('https://discord.gg/wg3X8ymHVR') 
        .setLabel('My Server')
 
       
