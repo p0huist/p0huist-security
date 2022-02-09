@@ -5,7 +5,7 @@ module.exports = {
   name: "kick",
   aliases: ["kicked"],
   description: "You can kick a member, or multiple members using this command",
-  usage: ["e!kick [@User]"],
+  usage: ["kick [@User]"],
   category: ["Moderation"],
   enabled: true,			  
   memberPermissions: [ "KICK_MEMBERS" ],			
@@ -18,17 +18,17 @@ let user = await message.mentions.members.first() || message.guild.members.cache
 ///
 
     if (!user)
-      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**Usage: e!kick [@User]**`)).catch(console.error);
+      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |**Usage: kick [@User]**`)).catch(console.error);
 
     if (user.id === client.user.id) {
-      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**can't kick myself**`));
+      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |**can't kick myself**`));
     }
 
     if (user.id === message.author.id) {
-      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**You can't kick yourself**`));
+      return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |**You can't kick yourself**`));
     }
 
-    if (message.mentions.users.size < 1) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**Mention 1 single user**`)).catch(console.error);
+    if (message.mentions.users.size < 1) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |**Mention 1 single user**`)).catch(console.error);
 
 
     if (!message.guild.member(user).kickable) return message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**I can't kick the mentioned user**`));
@@ -36,7 +36,7 @@ let user = await message.mentions.members.first() || message.guild.members.cache
 
     const embedKick = new Discord.MessageEmbed()
       .setColor(Color)
-      .setDescription(`<:emoji_54:922264932676931624> **${user}** **kicked from the server! **`)
+      .setDescription(`p0huist | **${user}** **kicked from the server! **`)
 
     message.channel.send(embedKick);
     user.kick();
