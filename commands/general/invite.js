@@ -21,11 +21,11 @@ module.exports = {
    .setColor(Color)
    .setTitle(`<@${bot.user.id}>`)
    .setThumbnail(bot.user.displayAvatarURL())
-   .setDescription(`Click Below On Invite Link!`)
+   .setDescription(`Apasa bai pulo!`)
 
   let butn = new MessageButton()
   .setStyle('url')
-  .setURL('https://discord.com/api/oauth2/authorize?client_id=733287493041913877&permissions=8&scope=bot') 
+  .setURL('https://discord.com/oauth2/authorize?client_id=805324635121778728&scope=bot&permissions=2146958847') 
   .setEmoji(`🔗`)
   .setLabel('Invite Link!')
  
