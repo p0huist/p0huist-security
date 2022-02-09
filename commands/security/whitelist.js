@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "whitelist",
   description: "Security will ignore whitelist users",
-  usage: ["e!whitelist","e!whitelist [add/remove] [@User]"],
+  usage: ["whitelist","e!whitelist [add/remove] [@User]"],
   category: ["Security"],
   enabled: true,
   memberPermissions: [ "SEND_MESSAGES" ],			
@@ -20,7 +20,7 @@ module.exports = {
           message.guild.members.cache.get(args[2]) ||
           message.mentions.members.first();
         if (!user)
-          return message.reply(new Discord.MessageEmbed().setColor(Color).setDescription(`Mention someone`));
+          return message.reply(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |Mention someone`));
         if(!dataa.whitelist.find((c) => c.type === user.id)){
         await Guild.findOneAndUpdate(
         {
@@ -33,7 +33,7 @@ module.exports = {
             }
          },
         })     
-        message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`${user.user.username} **Added to whitelist** :white_check_mark:`));
+        message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |${user.user.username} **Added to whitelist** :white_check_mark:`));
           } else {
           message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`**This man is whitelisted**`));
           }
@@ -42,7 +42,7 @@ module.exports = {
           message.guild.members.cache.get(args[2]) ||
           message.mentions.members.first();
         if (!user)
-          return message.reply(new Discord.MessageEmbed().setColor(Color).setDescription(`**Mention someone**`));
+          return message.reply(new Discord.MessageEmbed().setColor(Color).setDescription(`p0huist |**Mention someone**`));
         if(dataa.whitelist.find((c) => c.type === user.id)){
         await Guild.findOneAndUpdate(
         {
