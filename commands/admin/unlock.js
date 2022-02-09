@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "unlock",
   description: "Unlocks the current or selected text channels",
-  usage: ["e!unlock"],
+  usage: ["unlock"],
   category: ["Moderation"],
   enabled: true,			  
   memberPermissions: [ "MANAGE_CHANNELS" ],			
@@ -18,7 +18,7 @@ module.exports = {
       })
       .then(() => {
         message.channel.send(new Discord.MessageEmbed().setColor(Color).setDescription(`
-<:emoji_51:922264869510737941> | **UnLocked Channel**
+p0huist | **UnLocked Channel**
 **Channel Name** : <#${message.channel.id}>
 **Locked By** : <@${message.author.id}>
 **Channel Status : Send Message :** ✅`
