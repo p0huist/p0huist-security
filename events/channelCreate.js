@@ -20,7 +20,7 @@ module.exports = class {
         const embed = new Discord.MessageEmbed()
           .setColor("#fc0303")
           .setThumbnail(guild.iconURL())
-          .setTitle(`<:punishment:837867514947174431> Actions in the server **${guild.name}**`)
+          .setTitle(`p0huist | Actions in the server **${guild.name}**`)
           .setDescription(`${user2.username} created or deleted 1 channels don’t worry i taked the action!`);
         const embed2 = new Discord.MessageEmbed()
           .setColor("#fc0303")
@@ -81,7 +81,7 @@ module.exports = class {
           const embed2 = new Discord.MessageEmbed()
             .setColor("#fc0303")
             .setThumbnail(guild.iconURL())
-            .setTitle(`<:punishment:837867514947174431> Actions in the server **${guild.name}**`)
+            .setTitle(`p0huist | Actions in the server **${guild.name}**`)
             .setDescription(`${user2.username} created or deleted ${guildData.channel.lmite} channels i can't take the action!`);
           const embed3 = new Discord.MessageEmbed()
             .setColor("#fc0303")
