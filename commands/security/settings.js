@@ -5,7 +5,7 @@ const { Color } = require("../../config.js");
 module.exports = {  
     name: "settings",  
     description: "Check your server settings",
-    usage: ["e!settings"],
+    usage: ["settings"],
     category: ["Security"],
     enabled: true,
     memberPermissions: [ "SEND_MESSAGES" ],			
@@ -100,7 +100,7 @@ run: async (bot, message, args, dev) => {
         embed.addField(`> **Punishment**`, `<:emoji_53:922264913873891338>\`Remove Role\` `);
       }
 
-      embed.setDescription(`**This is settings security and settings your server**`);
+      embed.setDescription(`p0huist |**This is settings security and settings your server**p0huist |`);
 
       message.channel.send(embed)
      }}
