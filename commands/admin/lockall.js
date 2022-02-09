@@ -3,9 +3,9 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "lockall",
-  aliases: ["E!lockall"],
+  aliases: ["lockall"],
   description: "Locks all text channels from your server",
-  usage: ["e!lockall"],
+  usage: ["lockall"],
   category: ["Moderation"],
   enabled: true,              
   memberPermissions: [ "MANAGE_CHANNELS" ],            
@@ -18,7 +18,7 @@ module.exports = {
       const embed = new Discord.MessageEmbed()
       .setColor(Color)
       .setDescription(`
-<:emoji_51:922264869510737941> | **All Channels Locked**
+p0huist | **All Channels Locked**
 **All Channel Locked** |${message.guild.channels.cache.size}**
 **Channel Name** : <#${message.channel.id}>
 **Locked By** : <@${message.author.id}>
