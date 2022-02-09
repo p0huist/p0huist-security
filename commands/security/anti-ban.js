@@ -6,7 +6,7 @@ module.exports = {
   name: "antiban",
   aliases: ["anti-ban"],
   description: "Prevent others from mass banning your members",
-  usage: ["e!antiban [number/on/off]"],
+  usage: ["antiban [number/on/off]"],
   category: ["Security"],
   enabled: true,
   memberPermissions: ["SEND_MESSAGES"],
@@ -23,7 +23,7 @@ module.exports = {
       guild.save();
       const embed = new Discord.MessageEmbed()
         .setColor(Color)
-        .setDescription(`**The AntiBan system is enabled correctly!** :white_check_mark:`);
+        .setDescription(`p0huist |**The AntiBan system is enabled correctly!** :white_check_mark:`);
       return message.channel.send(embed);
      } else if (args[1] === "off") {
        guild.ban.onoff = "off";
@@ -44,7 +44,7 @@ module.exports = {
     guild.save();
     const embed3 = new Discord.MessageEmbed()
       .setColor(Color)
-      .setDescription(`**Successfully antiban changed to** **${guild.ban.lmite}** <:emoji_54:922264932676931624>`);
+      .setDescription(`p0huist |**Successfully antiban changed to** **${guild.ban.lmite}** <:emoji_54:922264932676931624>`);
     return message.channel.send(embed3);
  } 
 };
