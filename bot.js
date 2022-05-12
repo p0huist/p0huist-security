@@ -1,4 +1,4 @@
-//=============================== - [ Consts ] - ===================================//
+//============================== - [ Consts ] - ===================================//
 const inlinereply = require('discord-reply');
 const Discord = require("discord.js");
 const { MessageMenuOption, MessageMenu, MessageButton } = require("discord-buttons");
